@@ -1,0 +1,884 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    scroll-behavior: smooth;
+    color: aliceblue;
+    font-family: 'Mandali', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1rem;
+}
+img{
+    width: 100%;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.container{     
+    width: 90%;
+}
+
+
+.canifa{
+    background-image: url("../img/bg_header1.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 1750px;
+    overflow: hidden;
+}
+.canifa .header{
+    width: 100%;
+    margin-top: 40px;
+}
+.canifa .header .logo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(170, 174, 182, 0.34);
+}
+.canifa .header .logo img{
+    width: 180px;
+}
+.canifa .header .logo .search{
+    display: flex;
+}
+.canifa .header .logo .search .btn{
+    border: none;
+    border-radius: 0;
+}
+.canifa .header .logo .search .btn1{
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+}
+.canifa .header .logo .search .btn2{
+    color: rgba(255, 255, 255, 0.9);
+    background: #333;
+}
+.canifa .header .logo .search input{
+    outline: none;
+    border: none;
+    height: 40px;
+    padding: 0 55px 0 15px;
+    background: rgba(145, 144, 144, 0.3);
+    color: #fff;
+}
+.canifa .header .logo .search input::placeholder{
+    color: #fff;
+}
+.canifa .header .links{
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.canifa .header .links ul{
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+}
+.canifa .header .links ul li{
+    margin-right: 30px;
+}
+.canifa .header .links ul li a{
+    color: #d3d3d3;
+    opacity: 0.7;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.canifa .header .links ul li a:hover{
+    opacity: 1;
+    text-decoration: none;
+}
+.canifa .header .links .icon{
+    display: flex;
+    justify-content: flex-end;
+}
+.canifa .header .links .icon i{
+    margin-left: 18px;
+    cursor: pointer;
+}
+.canifa .main{
+    position: relative;
+    padding: 210px 0;
+    margin-bottom: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.canifa .main h1{
+    text-align: center;
+    font-size: 90px;
+    font-weight: 700;
+    line-height: 0.9;
+}
+.canifa .main h1 span{
+    font-size: 70px;
+}
+.canifa .main .mainTitel{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.canifa .main .mainTitel .sale{
+    width: 560px;
+    position: relative;
+    text-align: center;
+    background-color: rgba(51, 51, 51, 0.644);
+    margin: -90px 0 100px 0;
+    display: flex;
+    flex-direction: column;
+}
+.canifa .main .mainTitel .sale strong{
+    position: absolute;
+    color: #ffc229;
+    font-size: 260px;
+    font-family: 'Poiret One', cursive;
+    margin-top: 40px;
+    left: 150px;
+}
+.canifa .main .mainTitel .sale span{
+    font-size: 60px;
+    line-height: 1;
+    color: #ffc229;
+    font-family: 'Poiret One', cursive;
+    text-transform: uppercase;
+    position: absolute;
+    top: 170px;
+    left: 330px;
+}
+.canifa .main .mainTitel .sale h3{
+    font-size: 30px;
+    text-transform: uppercase;
+    left: 90px;
+    position: absolute;
+    top: 210px;
+}
+.canifa .img-ad{
+    position: relative;
+    overflow: hidden;
+
+}
+.canifa .img-ad .img-layer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    inset: 0;
+}
+.canifa .img-ad .img-layer h3{
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0 15px;
+    overflow: hidden;
+    position: relative;
+    top: 100px;
+    left: 50px;
+}
+.canifa .img-ad .img-layer span{
+    color: #ffc229;
+    font-size: 1.8rem;
+}
+.canifa .img-ad .ad-icon{
+    position: absolute;
+    top: 35%;
+    right: 60px;
+    font-size: 1.8rem;
+    color: #fff;
+    padding: 20px 25px;
+    background-color: #ffc229;
+    border-radius: 50%;
+    transition: all 0.7s;
+}
+.over{
+    margin-right: 16px;
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+.canifa .img-ad:hover .text-hiden{
+    right: 40px;
+    visibility: visible;
+}
+.canifa .img-ad:hover a{
+    background-color: #ffc22989;
+    padding: 230px 230px;
+    top: -130px;
+    right: -50px;
+    font-size: 3rem;
+}
+.canifa .img-ad .text-hiden{
+    position: absolute;
+    bottom: 30px;
+    right: -145px;
+    transition: all 0.5s;
+    letter-spacing: 1px;
+    z-index: 1;
+    visibility: hidden;
+}
+.canifa .img-ad .text-hiden p{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 400;
+
+}
+/*******************************************************/
+.new-arrivals{
+    padding: 60px 0;
+}
+.new-arrivals .logo2{
+    margin: 0 auto 25px;
+    display: flex;
+    flex-direction: column;
+}
+.new-arrivals .logo2 .titel{
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
+.new-arrivals .logo2 h2{
+    color: rgb(51, 51, 51);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.new-arrivals .logo2 .titel:hover i{
+    visibility: visible;
+    background-color: #ffc229;
+}
+.new-arrivals .logo2 i{
+    font-size: 1.3rem;
+    margin: 20px;
+    padding: 7px;
+    background-color: #333;
+    border-radius: 50%;
+    color: #fff;
+    transition: all 0.5s;
+    cursor: pointer;
+    visibility: hidden;
+}
+.new-arrivals .img-logo{
+    width: 30%;
+    margin: auto;
+}
+.new-arrivals .card , .fashion .card{
+    border: none;
+    border-radius: 0;
+}
+.changeImg{
+    position: relative;
+    overflow: hidden;
+}
+.changeImg .imgFront{
+    transition: all linear 0.4s;
+}
+.changeImg .imgBack{
+    position: absolute;
+    transition: all linear 0.4s;
+    inset: 0;
+    opacity: 0;
+}
+.changeImg:hover .imgFront{
+    opacity: 0;
+}
+.changeImg:hover .imgBack{
+    opacity: 1;
+}
+.changeImg .layer{
+    position: absolute;
+    inset: 0;
+    background-color: rgba(51, 51, 51, 0.363);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all linear 0.4s;
+    opacity: 0;
+}
+.changeImg:hover .layer{
+    opacity: 1;
+}
+.changeImg .layer .layerContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px 0 10px;
+    border: 1px solid #ffc229;
+}
+.layer-icon i{
+    padding: 10px;
+    margin: 20px 5px;
+    cursor: pointer;
+    transition: all linear 0.3s;
+}
+.layer-icon i:hover{
+    background-color: #f5b106;
+}
+.layer .btn1{
+    background-color: #ffc229;
+    color: #fff;
+    border-radius: 0;
+}
+.layer .btn1:hover{
+    background-color: #f5b106;
+}
+
+
+
+.new-arrivals .card .card-body , .fashion .card .card-body{
+    color: #333;
+    text-align: center;
+}
+
+
+
+.new-arrivals .back{
+    position: relative;
+}
+.new-arrivals .back img{
+    z-index: 1;
+}
+.new-arrivals .back .content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    inset: 0;
+    background-color: rgba(51, 51, 51, 0.751);
+}
+.new-arrivals .back .content .icons{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.new-arrivals .back .content .icons i{
+    padding: 15px;
+    color: #fff;
+    transition: all 0.3s;
+}
+.new-arrivals .back .content button{
+    padding: 15px 20px;
+    outline: none;
+    background: #ffc229;
+    color: #f9f9f9;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin: 1px;
+    border: none;
+    transition: all 0.3s;
+}
+.new-arrivals .back .content .bord{
+    position: absolute;
+    /* background-color: #333; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px 0 ;
+    border: 1px solid #ffc229;
+    z-index: 2;
+}
+
+
+/*******************************************************/
+.live-style .ads{
+    width: 100%;
+    display: flex;
+}
+.live-style .ads .ad-left , .ad-right{
+    width: 50%;
+}
+.live-style .ads .ad-left-big{
+    width: 67%;
+}
+.live-style .ads .ad-right-big{
+    width: 33.5%;
+}
+.live-style .ad-style{
+    background: #f9f9f9;
+    transition: all 0.5s;
+}
+.live-style .ad-style:hover{
+    background: #333;
+}
+.live-style .ad-style:hover span{
+    color: #fff;
+}
+.live-style .ad-style h2{
+    padding: 80px 0 0 40px;
+    color: #ffc229;
+    text-transform: uppercase;
+    font-size: 60px;
+    line-height: 1;
+}
+.live-style .ad-style .span1 , .span2 , .shop .light .span1 , .span2{
+    color: #333;
+    font-size: 30px;
+    line-height: 1;
+}
+.live-style .shop{
+    display: flex;
+}
+.live-style .shop .shop-content{
+    width: 33.3333%;
+}
+.live-style .shop .light{
+    background: #f9f9f9;
+}
+.live-style .shop .dark{
+    background: #333;
+}
+.live-style .shop .shop-content h2{
+    padding: 80px 0 0 40px;
+    color: #ffc229;
+    text-transform: uppercase;
+    font-size: 60px;
+    line-height: 1;
+}
+.live-style .shop .dark .span1 , .span2{
+    color: #fff;
+    font-size: 30px;
+    line-height: 1;
+}
+/*******************************************************/
+.fashion{
+    padding: 60px 0 0 0;
+}
+.fashion .logo2{
+    margin: 0 auto 25px;
+    display: flex;
+    flex-direction: column;
+}
+.fashion .logo2 .links{
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
+.fashion .logo2 .links ul{
+    display: flex;
+    align-items: center;
+}
+.fashion .logo2 .links ul li a{
+    margin: 0 15px;
+    text-transform: uppercase;
+    color: #333;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+.fashion .logo2 .links ul li a:hover{
+    text-decoration: none;
+}
+.fashion .logo2 .links ul li a:active{
+    color: #ffc229;
+}
+.fashion .logo2 h2{
+    color: rgb(51, 51, 51);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.fashion .logo2 .links:hover i{
+    visibility: visible;
+    background-color: #ffc229;
+}
+.fashion .logo2 i{
+    font-size: 1.3rem;
+    margin: 20px;
+    padding: 7px;
+    background-color: #333;
+    border-radius: 50%;
+    color: #fff;
+    transition: all 0.5s;
+    cursor: pointer;
+    visibility: hidden;
+}
+.fashion .img-logo{
+    width: 30%;
+    margin: auto;
+}
+
+.designers{
+    padding: 60px 0;
+    background-image: url("../img/parallax_011.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.designers .designer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.designers .designer .title h3{
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    font-weight: 500;
+}
+.designers .designer .designers-img{
+    margin: 0 30px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.designers .designer .designers-img .image{ 
+    margin: 12px;
+    border: 1px solid #d3d3d3;
+    padding: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+.designers .designer .designers-img .image img{
+    transition: all 0.3s;
+}
+.designers .designer .designers-img .image:hover img{
+    transform: scale(1.2);
+}
+.designers .designer .designer-btn button{
+    background-color: #f9f9f9;
+    border: none;
+    outline: none;
+    padding: 8px 30px;
+    transition: all 0.5s;
+}
+.designers .designer .designer-btn a{
+    color: #333;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+.designers .designer .designer-btn a:hover{
+    text-decoration: none;
+}
+.designers .designer .designer-btn button:hover{
+    background: #ffc229;
+}
+.designers .designer .designer-btn button:hover a{
+    color: #f9f9f9;
+}
+/*******************************************************/
+.collection{
+    padding: 60px 0;
+}
+.collection .img-collection{
+    position: relative;
+}
+.collection .img-collection:hover .text{
+    background-color: rgba(51, 51, 51, 0.307);
+}
+.collection .image{
+    margin: 10px 0;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+.collection .img-collection img{
+    transition: all 0.5s;
+}
+.collection .img-collection:hover img{
+    transform: scale(1.2);
+    /* transition: all 0.3s; */
+}
+.collection .img-collection .text{
+    text-align: center;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    inset: 0;
+    transition: all 0.3s;
+}
+.collection .img-collection .text strong{
+    background-color: rgba(62, 62, 62, 0.364);
+    color: #f9f9f9;
+    text-transform: uppercase;
+    padding: 30px;
+    border-radius: 50%;
+}
+.collection .img-collection .text h4{
+    font-size: 2rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.collection .flex{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.collection .ad-image{
+    width: 20%;
+    margin-bottom: 10px;
+    padding: 0 5px;
+    position: relative;
+}
+
+.customServices{
+    padding: 60px 0;
+    background: #fff;
+}
+.customServices .logo , .blog .logo{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.customServices .logo .img-logo , .blog .logo .img-logo{
+    width: 30%;
+}
+.customServices .logo h2 , .blog .logo h2{
+    color: #333;
+    font-size: 2rem;
+    margin: 20px 0;
+    text-transform: uppercase;
+}
+.customServices .service{
+    padding: 15px;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.customServices .service .img-icon{
+    /* padding: 25px; */
+    margin: 20px 0;
+    width: 90px;
+    height: 90px;
+    border: 1px solid rgba(51, 51, 51, 0.414);
+    border-radius: 50%;
+    transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.customServices .service .img-icon img{
+    width: 40%;
+    transition: all 0.3s;
+}
+.customServices .service .img-icon:hover img{
+    transform: rotate(50deg);
+}
+.customServices .service h4{
+    font-size: 1.1rem;
+    text-align: center;
+    color: rgba(51, 51, 51, 0.838);
+}
+.customServices .service p{
+    color: rgba(51, 51, 51, 0.845);
+    text-align: center;
+    font-size: 0.9rem;
+} 
+/*******************************************************/
+.blog{
+    padding: 60px 0;
+    background-image: url("../img/bg_blog1.png");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.blog .logo h2{
+    color: #ffffff;
+}
+.blog .our-blog{
+    margin-top: 25px;
+    position: relative;
+    transition: all 0.3s;
+}
+
+.blog .our-blog:hover .blog-layer{
+    display: block;
+opacity: 1;
+}
+
+.blog .blog-layer{
+    position: absolute;
+    background-color: #333333ac;
+    inset: 0;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+/*******************************************************/
+.mail{
+    padding: 0 0 30px 0;
+    background-image: url("../img/parallax_021.png");
+    background-position: bottom;
+    background-attachment: fixed;
+}
+.mail .light{
+    height: 100px;
+    background-color: #fff;
+}
+.mail .media i{
+    font-size: 2rem;
+    margin: 10px 10px 0 0;
+}
+.mail .media p{
+    font-size: 0.8rem;
+    color: #ffffff;
+    margin: 5px;
+}
+.mail .sign form{
+    margin-top: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.mail .sign input{
+    padding: 15px;
+    outline: none;
+    border: none;
+    width: 80%;
+}
+.mail .sign button{
+    padding: 15px 35px;
+    border: none;
+    color: #d3d3d3;
+    background: #333;
+    transition: all 0.4s;
+}
+.mail .sign button:hover{
+    color: #fff;
+    background: #ffc229;
+}
+/*******************************************************/
+.footer{
+    overflow: hidden;
+}
+.footer .links{
+    padding: 15px 0;
+    background-color: #333;
+    color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer .links label{
+    margin: 10px 30px 0 0;
+}
+.footer .links a{
+    margin: 10px 30px 0 0;
+    color: #f9f9f9;
+}
+.footer .links a:hover{
+    text-decoration: none;
+}
+.footer .main-footer{
+    background: rgb(51, 48, 48);
+    padding: 40px 0 60px 0;
+}
+.footer .img-footer{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.footer .img-footer img{
+    width: 30%;
+}
+.footer .img-footer span{
+    margin: 0 10px;
+}
+
+/* ************* JS ************* */
+#cartContainer{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.874);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cartBox{
+    position: relative;
+    width: 60%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    font-size: 14px;
+    overflow: hidden;
+}
+.cartBox .close{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: rgb(255, 241, 85);
+    font-size: 25px;
+    cursor: pointer;
+}
+.cartBox .cartLink{
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+.cartBox .cartLink:hover{
+    color: rgb(255, 241, 85);
+}
+.cartBox .cartStars{
+    margin: 10px 0;
+}
+.cartBox .cartStars i{
+    color: rgb(255, 241, 85);
+}
+.cartBox .cartStars span{
+    font-size: 12px;
+}
+.cartBox .list{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-top: 5px;
+}
+.cartBox .list li{
+    padding: 5px 15px;
+    font-weight: 500;
+}
+.cartBox .list .first{
+    background-color: rgb(222, 235, 245);
+    color: rgba(51, 51, 51, 0.792);
+}
+.cartBox .list .last{
+    background-color: rgb(172, 193, 208);
+    color: rgb(17, 17, 17);
+}
+.cartBox .cartP{
+    padding-bottom: 25px;
+    border-bottom: 1px solid rgb(255, 241, 85);
+}
+.cartBox .cart{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 15px;
+}
+.cartBox .cartLabel{
+    font-size: 16px;
+}
+.cartBox .cartInp{
+    border-radius: 0;
+    width: 70px;
+    text-align: center;
+}
+.cartBox .cartQTY{
+    display: flex;
+}
+.cartBox .qty{
+    padding: 7px 12px;
+    background-color: rgb(149, 174, 194);
+    color: #333;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+}

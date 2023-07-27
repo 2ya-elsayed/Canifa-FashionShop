@@ -1,0 +1,188 @@
+:root {
+    --text: #ffc229;
+    --dark: #333;
+
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    scroll-behavior: smooth;
+    color: aliceblue;
+    font-family: 'Mandali', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 1rem;
+}
+img{
+    width: 100%;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+
+
+.home{
+    overflow: hidden;
+    background-image: url('../img/bg_header1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+}
+.header .logo-img{
+    width: 35%;
+}
+.header .form{
+    margin-right: 0 ;
+}
+.header .header-form{
+    display: flex;
+    justify-content: end;
+}
+.header .btn{
+    border: none;
+    border-radius: 0;
+}
+
+nav .nav-link{
+    text-transform: capitalize;
+    color: #d3d3d3;
+}
+
+/**************************************/
+.main{
+    position: relative;
+    padding: 210px 0;
+    margin-bottom: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main h1{
+    text-align: center;
+    font-size: 90px;
+    font-weight: 700;
+    line-height: 0.9;
+}
+.main h1 span{
+    font-size: 70px;
+}
+.main .mainTitel{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.main .mainTitel .sale{
+    width: 560px;
+    position: relative;
+    text-align: center;
+    background-color: rgba(51, 51, 51, 0.644);
+    margin: -90px 0 100px 0;
+    display: flex;
+    flex-direction: column;
+}
+.main .mainTitel .sale strong{
+    position: absolute;
+    color: var(--text);
+    font-size: 260px;
+    font-family: 'Poiret One', cursive;
+    margin-top: 40px;
+    left: 150px;
+}
+.main .mainTitel .sale span{
+    font-size: 60px;
+    line-height: 1;
+    color: var(--text);
+    font-family: 'Poiret One', cursive;
+    text-transform: uppercase;
+    position: absolute;
+    top: 170px;
+    left: 330px;
+}
+.main .mainTitel .sale h3{
+    font-size: 30px;
+    text-transform: uppercase;
+    left: 90px;
+    position: absolute;
+    top: 210px;
+}
+.img-ad{
+    position: relative;
+    overflow: hidden;
+
+}
+.img-ad .img-layer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    inset: 0;
+}
+.img-ad .img-layer h3{
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0 15px;
+    overflow: hidden;
+    position: relative;
+    top: 100px;
+    left: 50px;
+}
+.img-ad .img-layer span{
+    color: var(--text);
+    font-size: 1.8rem;
+}
+.img-ad .ad-icon{
+    position: absolute;
+    top: 35%;
+    right: 60px;
+    font-size: 1.8rem;
+    color: #fff;
+    padding: 20px 25px;
+    background-color: var(--text);
+    border-radius: 50%;
+    transition: all 0.7s;
+}
+.over{
+    margin-right: 16px;
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+.img-ad:hover .text-hiden{
+    right: 40px;
+    visibility: visible;
+}
+.img-ad:hover a{
+    background-color: #ffc22980;
+    padding: 230px 230px;
+    top: -130px;
+    right: -50px;
+    font-size: 3rem;
+}
+.img-ad .text-hiden{
+    position: absolute;
+    bottom: 30px;
+    right: -180px;
+    transition: all 0.5s;
+    letter-spacing: 1px;
+    z-index: 1;
+    visibility: hidden;
+}
+.img-ad .text-hiden p{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 400;
+
+}

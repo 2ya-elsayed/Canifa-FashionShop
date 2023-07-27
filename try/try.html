@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            background-color: #333;
+        }
+        .box{
+            position: relative;
+            width: 400px;
+            height: 400px;
+            border-radius: 5px;
+            margin: 15px;
+            overflow: hidden;
+        }
+        img{
+            width: 100%;
+            transition: all linear 0.5s;
+
+        }
+        .hover-img{
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+        }
+        .box:hover img{
+            opacity: 0;
+        }
+        .box:hover .hover-img{
+            opacity: 1;
+        }
+        .layer{
+            position: absolute;
+            inset: 0;
+            background-color: rgba(51, 51, 51, 0.585);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: all linear 0.5s;
+            opacity: 0;
+        }
+        .box:hover .layer{
+            opacity: 1;
+        }
+        .btn1{
+            padding: 10px 20px;
+            margin: 10px;
+            outline: non;
+            border: none;
+            background-color: rgb(255, 202, 69);
+            color: #fff;
+            font-size: 22px;
+            cursor: pointer;
+        }
+        .layerContenr{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #cartContainer{
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.874);
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+        .cartBox{
+            position: relative;
+            width: 60%;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #fff;
+            font-size: 14px;
+            overflow: hidden;
+        }
+        .cartBox .close{
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            color: rgb(255, 241, 85);
+            font-size: 25px;
+            cursor: pointer;
+        }
+        .cartBox .cartLink{
+            color: #fff;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .cartBox .cartLink:hover{
+            color: rgb(255, 241, 85);
+        }
+        .cartBox .cartStars{
+            margin: 10px 0;
+        }
+        .cartBox .cartStars i{
+            color: rgb(255, 241, 85);
+        }
+        .cartBox .cartStars span{
+            font-size: 12px;
+        }
+        .cartBox .list{
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            margin-top: 5px;
+        }
+        .cartBox .list li{
+            padding: 5px 15px;
+            font-weight: 500;
+        }
+        .cartBox .list .first{
+            background-color: rgb(222, 235, 245);
+            color: rgba(51, 51, 51, 0.792);
+        }
+        .cartBox .list .last{
+            background-color: rgb(172, 193, 208);
+            color: rgb(17, 17, 17);
+        }
+        .cartBox .cartP{
+            padding-bottom: 25px;
+            border-bottom: 1px solid rgb(255, 241, 85);
+        }
+        .cartBox .cart{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 15px;
+        }
+        .cartBox .cartLabel{
+            font-size: 16px;
+        }
+        .cartBox .cartInp{
+            border-radius: 0;
+            width: 70px;
+            text-align: center;
+        }
+        .cartBox .cartQTY{
+            display: flex;
+        }
+        .cartBox .qty{
+            padding: 7px 12px;
+            background-color: rgb(149, 174, 194);
+            color: #333;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        #close {
+            z-index: 999;
+        }
+            
+
+
+    </style>
+</head>
+<body>
+    
+
+    <div class="box">
+        <img src="img/2 (1).png" alt="">
+        <img class="hover-img" src="img/17.png" alt="">
+        <div class="layer">
+            <div class="layerContenr">
+                <div class="layer-icon">
+                    <button class="btn btn1">1</button>
+                    <button class="btn btn1">2</button>
+                    <button class="btn btn1">3</button>
+                </div>
+                <button id="add" class="btn btn1">add to cart</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="cartContainer">
+        <div class="cartBox">
+            <i class="fa-solid fa-xmark close" id="close"></i>
+            <div class="row">
+                <div class="col-md-5 col-sm-6">
+                    <div class="cartImg">
+                        <img src="img/10.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-7 col-sm-6">
+                    <a class="cartLink" href="#">Sunt In Culpa Qui Offic</a>
+                    <div class="cartStars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half"></i>
+                        <span>( votes )</span>
+                    </div>
+                    <ul class="list">
+                        <li class="first">Product ID</li>
+                        <li class="last">msj015c-Khaki-M</li>
+                    </ul>
+                    <ul class="list">
+                        <li class="first">Avilability</li>
+                        <li class="last">In stock</li>
+                    </ul>
+                    <p class="cartP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates dolorem aut explicabo,
+                        et soluta omnis dignissimos ipsam error esse, expedita vel a! Quibusdam molestiae quia rerum totam repellendus tempore itaque.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi officiis, doloremque dolor officia dignissimos quas eveniet minima molestias illo, atque,
+                    </p>
+                    <h3 class="mt-2">£355.00 </h3>
+                    <span>7464 in stock</span>
+                    <form action="" class="cart">
+                        <div class="">
+                            <label class="cartLabel">QTY :</label>
+                        </div>
+                        <div class="cartQTY">
+                            <div class="qty"><span>-</span></div>
+                            <input type="number" min="1" max="12" name="quantity" value="1" class="form-control cartInp" title="qyt">
+                            <div class="qty"><span>+</span></div>
+                        </div>
+                        <div class="">
+                            <button class="btn btn-info">Add To Cart</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+
+
+    <script src="./js/jquery.slim.min.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
+
+
+
+
